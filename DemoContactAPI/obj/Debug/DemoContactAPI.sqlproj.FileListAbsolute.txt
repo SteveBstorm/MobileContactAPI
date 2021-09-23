@@ -1,0 +1,10 @@
+C:\Users\Steve\source\Demo\TFMobile21\DemoAPI\DemoContactAPI\bin\Debug\DemoContactAPI.dacpac
+C:\Users\Steve\source\Demo\TFMobile21\DemoAPI\DemoContactAPI\bin\Debug\DemoContactAPI.dll
+C:\Users\Steve\source\Demo\TFMobile21\DemoAPI\DemoContactAPI\bin\Debug\DemoContactAPI.pdb
+C:\Users\Steve\source\Demo\TFMobile21\DemoAPI\DemoContactAPI\obj\Debug\DemoContactAPI.sqlproj.AssemblyReference.cache
+C:\Users\Steve\source\Demo\TFMobile21\DemoAPI\DemoContactAPI\obj\Debug\Model.xml
+C:\Users\Steve\source\Demo\TFMobile21\DemoAPI\DemoContactAPI\obj\Debug\refactor.xml
+C:\Users\Steve\source\Demo\TFMobile21\DemoAPI\DemoContactAPI\obj\Debug\postdeploy.sql
+C:\Users\Steve\source\Demo\TFMobile21\DemoAPI\DemoContactAPI\obj\Debug\predeploy.sql
+C:\Users\Steve\source\Demo\TFMobile21\DemoAPI\DemoContactAPI\obj\Debug\DemoContactAPI.dll
+C:\Users\Steve\source\Demo\TFMobile21\DemoAPI\DemoContactAPI\obj\Debug\DemoContactAPI.pdb

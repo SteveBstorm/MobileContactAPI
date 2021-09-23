@@ -1,0 +1,12 @@
+C:\Users\Steve\source\Demo\TFMobile21\DemoAPI\DataAccessLayer\bin\Debug\net5.0\DataAccessLayer.deps.json
+C:\Users\Steve\source\Demo\TFMobile21\DemoAPI\DataAccessLayer\bin\Debug\net5.0\DataAccessLayer.dll
+C:\Users\Steve\source\Demo\TFMobile21\DemoAPI\DataAccessLayer\bin\Debug\net5.0\ref\DataAccessLayer.dll
+C:\Users\Steve\source\Demo\TFMobile21\DemoAPI\DataAccessLayer\bin\Debug\net5.0\DataAccessLayer.pdb
+C:\Users\Steve\source\Demo\TFMobile21\DemoAPI\DataAccessLayer\obj\Debug\net5.0\DataAccessLayer.csproj.AssemblyReference.cache
+C:\Users\Steve\source\Demo\TFMobile21\DemoAPI\DataAccessLayer\obj\Debug\net5.0\DataAccessLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Steve\source\Demo\TFMobile21\DemoAPI\DataAccessLayer\obj\Debug\net5.0\DataAccessLayer.AssemblyInfoInputs.cache
+C:\Users\Steve\source\Demo\TFMobile21\DemoAPI\DataAccessLayer\obj\Debug\net5.0\DataAccessLayer.AssemblyInfo.cs
+C:\Users\Steve\source\Demo\TFMobile21\DemoAPI\DataAccessLayer\obj\Debug\net5.0\DataAccessLayer.csproj.CoreCompileInputs.cache
+C:\Users\Steve\source\Demo\TFMobile21\DemoAPI\DataAccessLayer\obj\Debug\net5.0\DataAccessLayer.dll
+C:\Users\Steve\source\Demo\TFMobile21\DemoAPI\DataAccessLayer\obj\Debug\net5.0\ref\DataAccessLayer.dll
+C:\Users\Steve\source\Demo\TFMobile21\DemoAPI\DataAccessLayer\obj\Debug\net5.0\DataAccessLayer.pdb

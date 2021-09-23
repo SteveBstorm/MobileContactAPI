@@ -1,0 +1,9 @@
+﻿CREATE TABLE [dbo].[Contact]
+(
+	[Id] INT NOT NULL PRIMARY KEY IDENTITY,
+	[FirstName] VARCHAR(50) NOT NULL,
+	[LastName] VARCHAR(50) NOT NULL,
+	[Email] VARCHAR(100) NOT NULL,
+	[Telephone] VARCHAR(20) NOT NULL,
+	[IsFavorite] BIT DEFAULT 0
+)
