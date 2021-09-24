@@ -21,7 +21,20 @@ namespace DataAccessLayer.Services
 
         public bool Delete(int Id)
         {
-            throw new NotImplementedException();
+            using(SqlConnection connection = new SqlConnection(_connectionString))
+            {
+                connection.Open();
+
+                using(SqlCommand cmd = connection.CreateCommand())
+                {
+                    cmd.CommandText = "DELETE FROM Contact WHERE Id = @Id";
+                    cmd.Parameters.AddWithValue("Id", Id);
+
+                    int nbRow = cmd.ExecuteNonQuery();
+
+                    return nbRow == 1;
+                }
+            }
         }
 
         public IEnumerable<Contact> GetAll()
@@ -53,17 +66,89 @@ namespace DataAccessLayer.Services
 
         public Contact GetById(int Id)
         {
-            throw new NotImplementedException();
+            using(SqlConnection connection = new SqlConnection(_connectionString))
+            {
+                connection.Open();
+
+                using(SqlCommand cmd = connection.CreateCommand())
+                {
+                    cmd.CommandText = "SELECT * FROM Contact WHERE Id = @Id";
+
+                    SqlParameter idParameter = new SqlParameter("Id", Id);
+                    cmd.Parameters.Add(idParameter);
+
+                    using(SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        if(reader.Read())
+                        {
+                            return new Contact()
+                            {
+                                Id = (int)reader["Id"],
+                                LastName = reader["LastName"].ToString(),
+                                FirstName = reader["FirstName"].ToString(),
+                                Email = reader["Email"].ToString(),
+                                Telephone = reader["Telephone"].ToString(),
+                                IsFavorite = (bool)reader["IsFavorite"]
+                            };
+                        }
+
+                        return null;
+                    }
+
+                }
+            }
         }
 
         public int Insert(Contact c)
         {
-            throw new NotImplementedException();
+            using(SqlConnection connection = new SqlConnection(_connectionString))
+            {
+                connection.Open();
+
+                using(SqlCommand cmd = connection.CreateCommand())
+                {
+                    cmd.CommandText = "INSERT INTO Contact ([FirstName],[LastName], [Email],[Telephone], [IsFavorite])"
+                                    + " OUTPUT Inserted.Id"
+                                    + " VALUES (@FirstName, @LastName, @Email, @Telephone, @IsFavorite);";
+
+                    cmd.Parameters.AddWithValue("FirstName", c.FirstName);
+                    cmd.Parameters.AddWithValue("LastName", c.LastName);
+                    cmd.Parameters.AddWithValue("Email", c.Email);
+                    cmd.Parameters.AddWithValue("Telephone", c.Telephone);
+                    cmd.Parameters.AddWithValue("IsFavorite", c.IsFavorite);
+
+                    int id = (int)cmd.ExecuteScalar();
+                    return id;
+                }
+            }
         }
 
         public bool Update(Contact c)
         {
-            throw new NotImplementedException();
+            using (SqlConnection connection = new SqlConnection(_connectionString))
+            {
+                connection.Open();
+
+                using (SqlCommand cmd = connection.CreateCommand())
+                {
+                    cmd.CommandText = "UPDATE Contact"
+                                    + " SET [FirstName] = @FirstName,"
+                                    + "     [LastName] = @LastName,"
+                                    + "     [Email] = @Email,"
+                                    + "     [Telephone] = @Telephone"
+                                    + "     [IsFavorite] = @IsFavorite"
+                                    + " WHERE Id = @Id";
+
+                    cmd.Parameters.AddWithValue("Id", c.Id);
+                    cmd.Parameters.AddWithValue("FirstName", c.FirstName);
+                    cmd.Parameters.AddWithValue("LastName", c.LastName);
+                    cmd.Parameters.AddWithValue("Email", c.Email);
+                    cmd.Parameters.AddWithValue("Telephone", c.Telephone);
+                    cmd.Parameters.AddWithValue("IsFavorite", c.IsFavorite);
+
+                    return cmd.ExecuteNonQuery() == 1;
+                }
+            }
         }
     }
 }
