@@ -123,7 +123,7 @@ namespace DataAccessLayer.Services
             }
         }
 
-        public bool Update(Contact c)
+        public bool Update(int Id, Contact c)
         {
             using (SqlConnection connection = new SqlConnection(_connectionString))
             {
@@ -139,7 +139,7 @@ namespace DataAccessLayer.Services
                                     + "     [IsFavorite] = @IsFavorite"
                                     + " WHERE Id = @Id";
 
-                    cmd.Parameters.AddWithValue("Id", c.Id);
+                    cmd.Parameters.AddWithValue("Id", Id);
                     cmd.Parameters.AddWithValue("FirstName", c.FirstName);
                     cmd.Parameters.AddWithValue("LastName", c.LastName);
                     cmd.Parameters.AddWithValue("Email", c.Email);

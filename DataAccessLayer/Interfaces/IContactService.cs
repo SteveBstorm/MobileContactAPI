@@ -13,6 +13,6 @@ namespace DataAccessLayer.Interfaces
         Contact GetById(int Id);
         int Insert(Contact c);
         bool Delete(int Id);
-        bool Update(Contact c);
+        bool Update(int Id, Contact c);
     }
 }
