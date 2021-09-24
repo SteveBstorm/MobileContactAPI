@@ -10,3 +10,15 @@ C:\Users\Steve\source\Demo\TFMobile21\DemoAPI\DataAccessLayer\obj\Debug\net5.0\D
 C:\Users\Steve\source\Demo\TFMobile21\DemoAPI\DataAccessLayer\obj\Debug\net5.0\DataAccessLayer.dll
 C:\Users\Steve\source\Demo\TFMobile21\DemoAPI\DataAccessLayer\obj\Debug\net5.0\ref\DataAccessLayer.dll
 C:\Users\Steve\source\Demo\TFMobile21\DemoAPI\DataAccessLayer\obj\Debug\net5.0\DataAccessLayer.pdb
+C:\Users\forma300\Desktop\Web API\MobileContactAPI\DataAccessLayer\bin\Debug\net5.0\DataAccessLayer.deps.json
+C:\Users\forma300\Desktop\Web API\MobileContactAPI\DataAccessLayer\bin\Debug\net5.0\DataAccessLayer.dll
+C:\Users\forma300\Desktop\Web API\MobileContactAPI\DataAccessLayer\bin\Debug\net5.0\ref\DataAccessLayer.dll
+C:\Users\forma300\Desktop\Web API\MobileContactAPI\DataAccessLayer\bin\Debug\net5.0\DataAccessLayer.pdb
+C:\Users\forma300\Desktop\Web API\MobileContactAPI\DataAccessLayer\obj\Debug\net5.0\DataAccessLayer.csproj.AssemblyReference.cache
+C:\Users\forma300\Desktop\Web API\MobileContactAPI\DataAccessLayer\obj\Debug\net5.0\DataAccessLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\forma300\Desktop\Web API\MobileContactAPI\DataAccessLayer\obj\Debug\net5.0\DataAccessLayer.AssemblyInfoInputs.cache
+C:\Users\forma300\Desktop\Web API\MobileContactAPI\DataAccessLayer\obj\Debug\net5.0\DataAccessLayer.AssemblyInfo.cs
+C:\Users\forma300\Desktop\Web API\MobileContactAPI\DataAccessLayer\obj\Debug\net5.0\DataAccessLayer.csproj.CoreCompileInputs.cache
+C:\Users\forma300\Desktop\Web API\MobileContactAPI\DataAccessLayer\obj\Debug\net5.0\DataAccessLayer.dll
+C:\Users\forma300\Desktop\Web API\MobileContactAPI\DataAccessLayer\obj\Debug\net5.0\ref\DataAccessLayer.dll
+C:\Users\forma300\Desktop\Web API\MobileContactAPI\DataAccessLayer\obj\Debug\net5.0\DataAccessLayer.pdb

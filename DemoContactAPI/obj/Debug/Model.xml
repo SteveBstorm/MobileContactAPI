@@ -12,7 +12,7 @@
 		</CustomData>
 		<CustomData Category="Reference" Type="Assembly">
 			<Metadata Name="LogicalName" Value="DemoContactAPI.dll" />
-			<Metadata Name="FileName" Value="C:\USERS\STEVE\SOURCE\DEMO\TFMOBILE21\DEMOAPI\DEMOCONTACTAPI\OBJ\DEBUG\DEMOCONTACTAPI.DLL" />
+			<Metadata Name="FileName" Value="C:\USERS\FORMA300\DESKTOP\WEB API\MOBILECONTACTAPI\DEMOCONTACTAPI\OBJ\DEBUG\DEMOCONTACTAPI.DLL" />
 			<Metadata Name="AssemblyName" Value="DemoContactAPI" />
 			<Metadata Name="PermissionSet" Value="SAFE" />
 			<Metadata Name="Owner" Value="" />
@@ -20,7 +20,7 @@
 			<Metadata Name="IsVisible" Value="True" />
 			<Metadata Name="IsModelAware" Value="True" />
 			<Metadata Name="SkipCreationIfEmpty" Value="True" />
-			<Metadata Name="AssemblySymbolsName" Value="C:\Users\Steve\source\Demo\TFMobile21\DemoAPI\DemoContactAPI\obj\Debug\DemoContactAPI.pdb" />
+			<Metadata Name="AssemblySymbolsName" Value="C:\Users\forma300\Desktop\Web API\MobileContactAPI\DemoContactAPI\obj\Debug\DemoContactAPI.pdb" />
 		</CustomData>
 		<CustomData Category="SqlCmdVariables" Type="SqlCmdVariable" />
 	</Header>

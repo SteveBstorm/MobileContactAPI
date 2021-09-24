@@ -8,3 +8,13 @@ C:\Users\Steve\source\Demo\TFMobile21\DemoAPI\DemoContactAPI\obj\Debug\postdeplo
 C:\Users\Steve\source\Demo\TFMobile21\DemoAPI\DemoContactAPI\obj\Debug\predeploy.sql
 C:\Users\Steve\source\Demo\TFMobile21\DemoAPI\DemoContactAPI\obj\Debug\DemoContactAPI.dll
 C:\Users\Steve\source\Demo\TFMobile21\DemoAPI\DemoContactAPI\obj\Debug\DemoContactAPI.pdb
+C:\Users\forma300\Desktop\Web API\MobileContactAPI\DemoContactAPI\bin\Debug\DemoContactAPI.dacpac
+C:\Users\forma300\Desktop\Web API\MobileContactAPI\DemoContactAPI\bin\Debug\DemoContactAPI.dll
+C:\Users\forma300\Desktop\Web API\MobileContactAPI\DemoContactAPI\bin\Debug\DemoContactAPI.pdb
+C:\Users\forma300\Desktop\Web API\MobileContactAPI\DemoContactAPI\obj\Debug\DemoContactAPI.dll
+C:\Users\forma300\Desktop\Web API\MobileContactAPI\DemoContactAPI\obj\Debug\DemoContactAPI.pdb
+C:\Users\forma300\Desktop\Web API\MobileContactAPI\DemoContactAPI\obj\Debug\DemoContactAPI.sqlproj.AssemblyReference.cache
+C:\Users\forma300\Desktop\Web API\MobileContactAPI\DemoContactAPI\obj\Debug\Model.xml
+C:\Users\forma300\Desktop\Web API\MobileContactAPI\DemoContactAPI\obj\Debug\refactor.xml
+C:\Users\forma300\Desktop\Web API\MobileContactAPI\DemoContactAPI\obj\Debug\postdeploy.sql
+C:\Users\forma300\Desktop\Web API\MobileContactAPI\DemoContactAPI\obj\Debug\predeploy.sql
