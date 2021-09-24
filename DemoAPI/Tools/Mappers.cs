@@ -21,5 +21,18 @@ namespace DemoAPI.Tools
                 IsFavorite = c.IsFavorite
             };
         }
+
+        public static DAL.Contact ToDAL(this API.ContactForm c)
+        {
+            return new DAL.Contact
+            {
+                Id = 0,
+                LastName = c.LastName,
+                FirstName = c.FirstName,
+                Email = c.Email,
+                Telephone = c.Telephone,
+                IsFavorite = c.IsFavorite
+            };
+        }
     }
 }
