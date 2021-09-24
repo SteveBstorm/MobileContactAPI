@@ -231,13 +231,24 @@
         "framework": ".NETCoreApp,Version=v5.0",
         "dependencies": {
           "Microsoft.Extensions.Configuration.Abstractions": "5.0.0",
-          "System.Data.SqlClient": "4.8.3"
+          "System.Data.SqlClient": "4.8.3",
+          "ToolBox.Database": "1.0.0"
         },
         "compile": {
           "bin/placeholder/DataAccessLayer.dll": {}
         },
         "runtime": {
           "bin/placeholder/DataAccessLayer.dll": {}
+        }
+      },
+      "ToolBox.Database/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/ToolBox.Database.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ToolBox.Database.dll": {}
         }
       }
     }
@@ -709,6 +720,11 @@
       "type": "project",
       "path": "../DataAccessLayer/DataAccessLayer.csproj",
       "msbuildProject": "../DataAccessLayer/DataAccessLayer.csproj"
+    },
+    "ToolBox.Database/1.0.0": {
+      "type": "project",
+      "path": "../ToolBox.Database/ToolBox.Database.csproj",
+      "msbuildProject": "../ToolBox.Database/ToolBox.Database.csproj"
     }
   },
   "projectFileDependencyGroups": {

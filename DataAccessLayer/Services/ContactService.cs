@@ -3,152 +3,116 @@ using DataAccessLayer.Models;
 using Microsoft.Extensions.Configuration;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ToolBox.Database;
 
 namespace DataAccessLayer.Services
 {
     public class ContactService : IContactService
     {
         private string _connectionString;
+        private Connection _Connection;
 
         public ContactService(IConfiguration config)
         {
             _connectionString = config.GetConnectionString("default");
+
+            _Connection = new Connection(SqlClientFactory.Instance, _connectionString);
         }
 
         public bool Delete(int Id)
         {
-            using(SqlConnection connection = new SqlConnection(_connectionString))
+            Command command = new Command("DELETE FROM Contact WHERE Id = @Id");
+            command.AddParameter("Id", Id);
+
+            _Connection.Open();
+            int nbRow = _Connection.ExecuteNonQuery(command);
+            _Connection.Close();
+
+            return nbRow == 1;
+        }
+
+        private Contact Converter(IDataReader reader)
+        {
+            return new Contact
             {
-                connection.Open();
-
-                using(SqlCommand cmd = connection.CreateCommand())
-                {
-                    cmd.CommandText = "DELETE FROM Contact WHERE Id = @Id";
-                    cmd.Parameters.AddWithValue("Id", Id);
-
-                    int nbRow = cmd.ExecuteNonQuery();
-
-                    return nbRow == 1;
-                }
-            }
+                Id = (int)reader["Id"],
+                LastName = reader["LastName"].ToString(),
+                FirstName = reader["FirstName"].ToString(),
+                Email = reader["Email"].ToString(),
+                Telephone = reader["Telephone"].ToString(),
+                IsFavorite = (bool)reader["IsFavorite"]
+            };
         }
 
         public IEnumerable<Contact> GetAll()
         {
-            using(SqlConnection connection = new SqlConnection(_connectionString))
-            {
-                connection.Open();
-                using(SqlCommand cmd = connection.CreateCommand())
-                {
-                    cmd.CommandText = "SELECT * FROM Contact";
-                    using(SqlDataReader reader = cmd.ExecuteReader())
-                    {
-                        while (reader.Read())
-                        {
-                            yield return new Contact
-                            {
-                                Id = (int)reader["Id"],
-                                LastName = reader["LastName"].ToString(),
-                                FirstName = reader["FirstName"].ToString(),
-                                Email = reader["Email"].ToString(),
-                                Telephone = reader["Telephone"].ToString(),
-                                IsFavorite = (bool)reader["IsFavorite"]
-                            };
-                        }
-                    }
-                }
-            }
+            Command command = new Command("SELECT * FROM Contact");
+
+            _Connection.Open();
+            IEnumerable<Contact> contacts = _Connection.ExecuteReader(command, Converter);
+            _Connection.Close();
+
+            return contacts;
         }
 
         public Contact GetById(int Id)
         {
-            using(SqlConnection connection = new SqlConnection(_connectionString))
-            {
-                connection.Open();
+            Command command = new Command("SELECT * FROM Contact WHERE Id = @Id");
+            command.AddParameter("Id", Id);
 
-                using(SqlCommand cmd = connection.CreateCommand())
-                {
-                    cmd.CommandText = "SELECT * FROM Contact WHERE Id = @Id";
+            _Connection.Open();
+            Contact contact = _Connection.ExecuteReader(command, Converter).SingleOrDefault();
+            _Connection.Close();
 
-                    SqlParameter idParameter = new SqlParameter("Id", Id);
-                    cmd.Parameters.Add(idParameter);
-
-                    using(SqlDataReader reader = cmd.ExecuteReader())
-                    {
-                        if(reader.Read())
-                        {
-                            return new Contact()
-                            {
-                                Id = (int)reader["Id"],
-                                LastName = reader["LastName"].ToString(),
-                                FirstName = reader["FirstName"].ToString(),
-                                Email = reader["Email"].ToString(),
-                                Telephone = reader["Telephone"].ToString(),
-                                IsFavorite = (bool)reader["IsFavorite"]
-                            };
-                        }
-
-                        return null;
-                    }
-
-                }
-            }
+            return contact;
         }
 
         public int Insert(Contact c)
         {
-            using(SqlConnection connection = new SqlConnection(_connectionString))
-            {
-                connection.Open();
+            Command command = new Command("INSERT INTO Contact ([FirstName],[LastName], [Email],[Telephone], [IsFavorite])"
+                                       + " OUTPUT Inserted.Id"
+                                       + " VALUES (@FirstName, @LastName, @Email, @Telephone, @IsFavorite);");
 
-                using(SqlCommand cmd = connection.CreateCommand())
-                {
-                    cmd.CommandText = "INSERT INTO Contact ([FirstName],[LastName], [Email],[Telephone], [IsFavorite])"
-                                    + " OUTPUT Inserted.Id"
-                                    + " VALUES (@FirstName, @LastName, @Email, @Telephone, @IsFavorite);";
+            command.AddParameter("FirstName", c.FirstName);
+            command.AddParameter("LastName", c.LastName);
+            command.AddParameter("Email", c.Email);
+            command.AddParameter("Telephone", c.Telephone);
+            command.AddParameter("IsFavorite", c.IsFavorite);
 
-                    cmd.Parameters.AddWithValue("FirstName", c.FirstName);
-                    cmd.Parameters.AddWithValue("LastName", c.LastName);
-                    cmd.Parameters.AddWithValue("Email", c.Email);
-                    cmd.Parameters.AddWithValue("Telephone", c.Telephone);
-                    cmd.Parameters.AddWithValue("IsFavorite", c.IsFavorite);
+            _Connection.Open();
+            int newId = _Connection.ExecuteScalar<int>(command);
+            _Connection.Close();
 
-                    int id = (int)cmd.ExecuteScalar();
-                    return id;
-                }
-            }
+            return newId;
         }
 
         public bool Update(int Id, Contact c)
         {
-            using (SqlConnection connection = new SqlConnection(_connectionString))
-            {
-                connection.Open();
+            Command command = new Command("UPDATE Contact"
+                                        + " SET [FirstName] = @FirstName,"
+                                        + "     [LastName] = @LastName,"
+                                        + "     [Email] = @Email,"
+                                        + "     [Telephone] = @Telephone"
+                                        + "     [IsFavorite] = @IsFavorite"
+                                        + " WHERE Id = @Id");
 
-                using (SqlCommand cmd = connection.CreateCommand())
-                {
-                    cmd.CommandText = "UPDATE Contact"
-                                    + " SET [FirstName] = @FirstName,"
-                                    + "     [LastName] = @LastName,"
-                                    + "     [Email] = @Email,"
-                                    + "     [Telephone] = @Telephone"
-                                    + "     [IsFavorite] = @IsFavorite"
-                                    + " WHERE Id = @Id";
+            command.AddParameter("Id", Id);
+            command.AddParameter("FirstName", c.FirstName);
+            command.AddParameter("LastName", c.LastName);
+            command.AddParameter("Email", c.Email);
+            command.AddParameter("Telephone", c.Telephone);
+            command.AddParameter("IsFavorite", c.IsFavorite);
 
-                    cmd.Parameters.AddWithValue("Id", Id);
-                    cmd.Parameters.AddWithValue("FirstName", c.FirstName);
-                    cmd.Parameters.AddWithValue("LastName", c.LastName);
-                    cmd.Parameters.AddWithValue("Email", c.Email);
-                    cmd.Parameters.AddWithValue("Telephone", c.Telephone);
-                    cmd.Parameters.AddWithValue("IsFavorite", c.IsFavorite);
+            _Connection.Open();
+            bool test = _Connection.ExecuteNonQuery(command) == 1;
+            _Connection.Close();
 
-                    return cmd.ExecuteNonQuery() == 1;
-                }
-            }
+            return test;
         }
     }
 }

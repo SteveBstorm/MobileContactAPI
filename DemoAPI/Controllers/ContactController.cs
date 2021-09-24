@@ -67,6 +67,7 @@ namespace DemoAPI.Controllers
                 return Ok($"Enregistrement effectué, l'id est {newId}");
             }
             else return BadRequest();
+
         }
 
         //https://localhost:port/api/contact/1

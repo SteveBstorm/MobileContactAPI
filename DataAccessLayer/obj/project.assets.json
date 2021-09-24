@@ -151,6 +151,16 @@
             "rid": "win"
           }
         }
+      },
+      "ToolBox.Database/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/ToolBox.Database.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ToolBox.Database.dll": {}
+        }
       }
     }
   },
@@ -509,12 +519,18 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
+    },
+    "ToolBox.Database/1.0.0": {
+      "type": "project",
+      "path": "../ToolBox.Database/ToolBox.Database.csproj",
+      "msbuildProject": "../ToolBox.Database/ToolBox.Database.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net5.0": [
       "Microsoft.Extensions.Configuration.Abstractions >= 5.0.0",
-      "System.Data.SqlClient >= 4.8.3"
+      "System.Data.SqlClient >= 4.8.3",
+      "ToolBox.Database >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -551,7 +567,11 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\forma300\\Desktop\\Web API\\MobileContactAPI\\ToolBox.Database\\ToolBox.Database.csproj": {
+              "projectPath": "C:\\Users\\forma300\\Desktop\\Web API\\MobileContactAPI\\ToolBox.Database\\ToolBox.Database.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
