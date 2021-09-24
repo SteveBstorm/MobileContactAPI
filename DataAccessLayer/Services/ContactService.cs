@@ -53,8 +53,9 @@ namespace DataAccessLayer.Services
         {
             Command command = new Command("SELECT * FROM Contact");
 
+
             _Connection.Open();
-            IEnumerable<Contact> contacts = _Connection.ExecuteReader(command, Converter);
+            IEnumerable<Contact> contacts = _Connection.ExecuteReader(command, Converter).ToList() ;
             _Connection.Close();
 
             return contacts;
@@ -97,7 +98,7 @@ namespace DataAccessLayer.Services
                                         + " SET [FirstName] = @FirstName,"
                                         + "     [LastName] = @LastName,"
                                         + "     [Email] = @Email,"
-                                        + "     [Telephone] = @Telephone"
+                                        + "     [Telephone] = @Telephone,"
                                         + "     [IsFavorite] = @IsFavorite"
                                         + " WHERE Id = @Id");
 

@@ -22,3 +22,6 @@ C:\Users\forma300\Desktop\Web API\MobileContactAPI\DataAccessLayer\obj\Debug\net
 C:\Users\forma300\Desktop\Web API\MobileContactAPI\DataAccessLayer\obj\Debug\net5.0\DataAccessLayer.dll
 C:\Users\forma300\Desktop\Web API\MobileContactAPI\DataAccessLayer\obj\Debug\net5.0\ref\DataAccessLayer.dll
 C:\Users\forma300\Desktop\Web API\MobileContactAPI\DataAccessLayer\obj\Debug\net5.0\DataAccessLayer.pdb
+C:\Users\forma300\Desktop\Web API\MobileContactAPI\DataAccessLayer\bin\Debug\net5.0\ToolBox.Database.dll
+C:\Users\forma300\Desktop\Web API\MobileContactAPI\DataAccessLayer\bin\Debug\net5.0\ToolBox.Database.pdb
+C:\Users\forma300\Desktop\Web API\MobileContactAPI\DataAccessLayer\obj\Debug\net5.0\DataAccessLayer.csproj.CopyComplete

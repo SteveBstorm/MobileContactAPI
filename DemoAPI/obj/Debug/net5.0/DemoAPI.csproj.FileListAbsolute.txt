@@ -72,3 +72,5 @@ C:\Users\forma300\Desktop\Web API\MobileContactAPI\DemoAPI\obj\Debug\net5.0\Demo
 C:\Users\forma300\Desktop\Web API\MobileContactAPI\DemoAPI\obj\Debug\net5.0\ref\DemoAPI.dll
 C:\Users\forma300\Desktop\Web API\MobileContactAPI\DemoAPI\obj\Debug\net5.0\DemoAPI.pdb
 C:\Users\forma300\Desktop\Web API\MobileContactAPI\DemoAPI\obj\Debug\net5.0\DemoAPI.genruntimeconfig.cache
+C:\Users\forma300\Desktop\Web API\MobileContactAPI\DemoAPI\bin\Debug\net5.0\ToolBox.Database.dll
+C:\Users\forma300\Desktop\Web API\MobileContactAPI\DemoAPI\bin\Debug\net5.0\ToolBox.Database.pdb

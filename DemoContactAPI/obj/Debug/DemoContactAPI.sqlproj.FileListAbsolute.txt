@@ -14,7 +14,3 @@ C:\Users\forma300\Desktop\Web API\MobileContactAPI\DemoContactAPI\bin\Debug\Demo
 C:\Users\forma300\Desktop\Web API\MobileContactAPI\DemoContactAPI\obj\Debug\DemoContactAPI.dll
 C:\Users\forma300\Desktop\Web API\MobileContactAPI\DemoContactAPI\obj\Debug\DemoContactAPI.pdb
 C:\Users\forma300\Desktop\Web API\MobileContactAPI\DemoContactAPI\obj\Debug\DemoContactAPI.sqlproj.AssemblyReference.cache
-C:\Users\forma300\Desktop\Web API\MobileContactAPI\DemoContactAPI\obj\Debug\Model.xml
-C:\Users\forma300\Desktop\Web API\MobileContactAPI\DemoContactAPI\obj\Debug\refactor.xml
-C:\Users\forma300\Desktop\Web API\MobileContactAPI\DemoContactAPI\obj\Debug\postdeploy.sql
-C:\Users\forma300\Desktop\Web API\MobileContactAPI\DemoContactAPI\obj\Debug\predeploy.sql

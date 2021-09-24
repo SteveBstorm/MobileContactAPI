@@ -472,13 +472,22 @@
       "DataAccessLayer/1.0.0": {
         "dependencies": {
           "Microsoft.Extensions.Configuration.Abstractions": "5.0.0",
-          "System.Data.SqlClient": "4.8.3"
+          "System.Data.SqlClient": "4.8.3",
+          "ToolBox.Database": "1.0.0"
         },
         "runtime": {
           "DataAccessLayer.dll": {}
         },
         "compile": {
           "DataAccessLayer.dll": {}
+        }
+      },
+      "ToolBox.Database/1.0.0": {
+        "runtime": {
+          "ToolBox.Database.dll": {}
+        },
+        "compile": {
+          "ToolBox.Database.dll": {}
         }
       },
       "Microsoft.AspNetCore.Antiforgery/5.0.0.0": {
@@ -2307,6 +2316,11 @@
       "hashPath": "system.security.principal.windows.4.7.0.nupkg.sha512"
     },
     "DataAccessLayer/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ToolBox.Database/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

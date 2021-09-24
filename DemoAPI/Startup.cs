@@ -1,3 +1,5 @@
+using DataAccessLayer.Interfaces;
+using DataAccessLayer.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -26,6 +28,13 @@ namespace DemoAPI
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            #region Injection de dépendences
+            // Singleton -> Génére instance unique pour l'application
+            // Scoped    -> Création d'instance lier au connexion (Requete vers l'api du client)
+            // Transient -> Génération d'une nouvelle instance a chaque appel
+
+            services.AddTransient(typeof(IContactService), typeof(ContactService));
+            #endregion
 
             services.AddControllers();
             services.AddSwaggerGen(c =>

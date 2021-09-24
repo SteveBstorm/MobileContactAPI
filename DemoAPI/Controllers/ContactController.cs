@@ -18,9 +18,10 @@ namespace DemoAPI.Controllers
     public class ContactController : ControllerBase
     {
         private IContactService _service;
-        public ContactController(IConfiguration config) 
+
+        public ContactController(IContactService ContactService) 
         {
-            _service = new ContactService(config);
+            _service = ContactService;
         }
 
         //https://localhost:port/api/contact
