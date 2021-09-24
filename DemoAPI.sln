@@ -3,11 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31424.327
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DemoAPI", "DemoAPI\DemoAPI.csproj", "{C669C4C7-67DF-4C25-BBCD-B2968EA8243C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DemoAPI", "DemoAPI\DemoAPI.csproj", "{C669C4C7-67DF-4C25-BBCD-B2968EA8243C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccessLayer", "DataAccessLayer\DataAccessLayer.csproj", "{0A15A615-DA89-43ED-BB86-32C0162521E4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataAccessLayer", "DataAccessLayer\DataAccessLayer.csproj", "{0A15A615-DA89-43ED-BB86-32C0162521E4}"
 EndProject
 Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "DemoContactAPI", "DemoContactAPI\DemoContactAPI.sqlproj", "{FB844EC0-6403-4C9F-954B-9504EBBAF198}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToolBox.Database", "ToolBox.Database\ToolBox.Database.csproj", "{1ADC85EF-0193-40B8-917E-7DA594EBEFB3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,6 +31,10 @@ Global
 		{FB844EC0-6403-4C9F-954B-9504EBBAF198}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FB844EC0-6403-4C9F-954B-9504EBBAF198}.Release|Any CPU.Build.0 = Release|Any CPU
 		{FB844EC0-6403-4C9F-954B-9504EBBAF198}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{1ADC85EF-0193-40B8-917E-7DA594EBEFB3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1ADC85EF-0193-40B8-917E-7DA594EBEFB3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1ADC85EF-0193-40B8-917E-7DA594EBEFB3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1ADC85EF-0193-40B8-917E-7DA594EBEFB3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
