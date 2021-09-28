@@ -16,3 +16,8 @@ VALUES ('Arthur', 'Pendragon', 'arthur@kaamelott.com', '0123/45.67.89', 1)
 
 INSERT INTO Contact (FirstName, LastName, Email, Telephone, IsFavorite)
 VALUES ('Perceval', 'De Galles', 'provencal@legaulois.com', '0123/98.67.34', 0)
+
+EXEC RegisterUser 'test@test.com', 'test1234', 0
+
+
+EXEC RegisterUser 'admin@test.com', 'test1234', 1

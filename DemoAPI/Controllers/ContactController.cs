@@ -10,9 +10,11 @@ using System.Linq;
 using System.Threading.Tasks;
 using DemoAPI.Tools;
 using System.Net;
+using Microsoft.AspNetCore.Authorization;
 
 namespace DemoAPI.Controllers
 {
+   // [Authorize("user")]
     [Route("api/[controller]")]
     [ApiController]
     public class ContactController : ControllerBase
@@ -25,6 +27,7 @@ namespace DemoAPI.Controllers
         }
 
         //https://localhost:port/api/contact
+        [Authorize("user")]
         [HttpGet]
         public IActionResult GetAll()
         {
@@ -39,6 +42,7 @@ namespace DemoAPI.Controllers
         }
 
         //https://localhost:port/api/contact/1
+        
         [HttpGet("{Id}")]
         public IActionResult GetById(int Id)
         {
@@ -58,6 +62,7 @@ namespace DemoAPI.Controllers
         }
 
         //https://localhost:port/api/contact
+        [Authorize("admin")]
         [HttpPost]
         public IActionResult Insertion(ContactForm c)
         {
@@ -72,7 +77,8 @@ namespace DemoAPI.Controllers
         }
 
         //https://localhost:port/api/contact/1
-        [HttpDelete]
+        [Authorize("admin")]
+        [HttpDelete("{id}")]
         public IActionResult Suppression(int Id)
         {
             if(_service.Delete(Id))

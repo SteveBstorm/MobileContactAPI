@@ -57,9 +57,15 @@
   <ItemGroup>
     <Folder Include="Properties" />
     <Folder Include="Tables" />
+    <Folder Include="StoredProc" />
+    <Folder Include="Functions" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="Tables\Contact.sql" />
+    <Build Include="Tables\Users.sql" />
+    <Build Include="StoredProc\RegisterUser.sql" />
+    <Build Include="Functions\GetSecretKey.sql" />
+    <Build Include="StoredProc\LoginUser.sql" />
   </ItemGroup>
   <ItemGroup>
     <PostDeploy Include="Script.PostDeployment1.sql" />

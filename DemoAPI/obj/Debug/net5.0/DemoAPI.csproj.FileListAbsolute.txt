@@ -74,3 +74,10 @@ C:\Users\forma300\Desktop\Web API\MobileContactAPI\DemoAPI\obj\Debug\net5.0\Demo
 C:\Users\forma300\Desktop\Web API\MobileContactAPI\DemoAPI\obj\Debug\net5.0\DemoAPI.genruntimeconfig.cache
 C:\Users\forma300\Desktop\Web API\MobileContactAPI\DemoAPI\bin\Debug\net5.0\ToolBox.Database.dll
 C:\Users\forma300\Desktop\Web API\MobileContactAPI\DemoAPI\bin\Debug\net5.0\ToolBox.Database.pdb
+C:\Users\forma300\Desktop\Web API\MobileContactAPI\DemoAPI\bin\Debug\net5.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\forma300\Desktop\Web API\MobileContactAPI\DemoAPI\bin\Debug\net5.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\forma300\Desktop\Web API\MobileContactAPI\DemoAPI\bin\Debug\net5.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\forma300\Desktop\Web API\MobileContactAPI\DemoAPI\bin\Debug\net5.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\forma300\Desktop\Web API\MobileContactAPI\DemoAPI\bin\Debug\net5.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\forma300\Desktop\Web API\MobileContactAPI\DemoAPI\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\forma300\Desktop\Web API\MobileContactAPI\DemoAPI\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
